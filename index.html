@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>잃어버린 조각 — S01 남자아이의 방</title>
+    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Ccircle cx='8' cy='8' r='6' fill='%23f2b23a' stroke='%232b211c' stroke-width='2'/%3E%3C/svg%3E" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Gaegu:wght@400;700&family=Gowun+Dodum&display=swap" rel="stylesheet" />
+    <script type="module" crossorigin src="./assets/index-Zp4tyJkK.js"></script>
+    <link rel="stylesheet" crossorigin href="./assets/index-BBgfidYx.css">
+  </head>
+  <body>
+    <div id="app"></div>
+
+    <header class="panel title-panel">
+      <p class="kicker">STAGE 01 · 남자아이의 방</p>
+      <h1>잃어버린 조각</h1>
+      <p id="goal" class="goal">방을 불러오는 중…</p>
+    </header>
+
+    <aside class="panel inv-panel" aria-label="수집한 조각">
+      <div class="inv-head"><span>조각</span><b id="counter">0 / 3</b></div>
+      <ul id="slots" class="slots"></ul>
+    </aside>
+
+    <nav class="controls">
+      <button id="btn-left" class="round" title="왼쪽으로 45° (Q)" aria-label="왼쪽으로 회전">↶</button>
+      <div id="compass" class="compass" aria-hidden="true"><span id="compass-needle" class="needle"></span><span class="n">N</span></div>
+      <button id="btn-right" class="round" title="오른쪽으로 45° (E)" aria-label="오른쪽으로 회전">↷</button>
+      <button id="btn-reset" class="pill" title="R">시점 초기화</button>
+      <button id="btn-restart" class="pill">다시 시작</button>
+    </nav>
+
+    <p class="hint">드래그 회전(좌우·위) · 휠 확대 · 클릭 조사 · 물건 끌어서 던지기 · Q/E 45° · R 초기화</p>
+
+    <div id="inspect" class="inspect" aria-label="자세히 보기">
+      <p id="inspect-title" class="panel inspect-title"></p>
+      <button id="inspect-close" class="pill">닫기</button>
+      <p class="inspect-hint">드래그로 돌려 보기 · 휠/두 손가락으로 확대</p>
+    </div>
+
+    <div id="toast" class="toast" role="status" aria-live="polite"></div>
+
+    <div id="loading" class="overlay">
+      <div class="card">
+        <p id="loading-text">방을 꾸리는 중…</p>
+        <div class="bar"><span id="loading-bar"></span></div>
+      </div>
+    </div>
+
+    <div id="complete" class="overlay complete">
+      <div class="card burst">
+        <p class="kicker">STAGE 01 CLEAR</p>
+        <h2>탈출 성공!</h2>
+        <p>세 조각을 모아 남자아이의 방을 빠져나왔다.</p>
+        <dl class="stats">
+          <div><dt>걸린 시간</dt><dd id="stat-time">-</dd></div>
+          <div><dt>클릭</dt><dd id="stat-clicks">-</dd></div>
+        </dl>
+        <button id="btn-again" class="pill big">다시 시작</button>
+      </div>
+    </div>
+
+  </body>
+</html>
